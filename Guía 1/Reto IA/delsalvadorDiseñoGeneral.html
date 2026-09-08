@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es-SV">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Directorio de Empresas de El Salvador — delSALVADOR.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cal:#FAF6EE;        /* cal blanco - whitewashed wall */
+    --ink:#211C16;        /* tinta - warm near-black */
+    --indigo:#1C3A54;     /* cielo - night sky / añil */
+    --indigo-ink:#12252F.5;
+    --sol:#F0A93A;        /* sol - marigold yellow */
+    --sol-deep:#C9871F;
+    --barro:#B7502F;      /* barro - clay / terracotta textile */
+    --piedra:#83786B;     /* piedra - stone, muted text */
+    --linea:#E1D7C4;      /* hairline */
+    --cal-deep:#F1EADA;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cal);
+    color:var(--ink);
+    font-family:'Public Sans', sans-serif;
+    font-size:16px;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    margin:0;
+    color:var(--ink);
+  }
+  a{color:inherit;text-decoration:none;}
+  a:focus-visible, button:focus-visible, input:focus-visible{
+    outline:2.5px solid var(--indigo);
+    outline-offset:3px;
+  }
+  ul{margin:0;padding:0;list-style:none;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:20;
+    background:var(--cal);
+    border-bottom:1px solid var(--linea);
+  }
+  .header-row{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 32px;max-width:1180px;margin:0 auto;gap:24px;
+  }
+  .brand{
+    font-family:'Fraunces', serif;font-weight:600;font-size:1.5rem;
+    display:flex;align-items:baseline;gap:2px;white-space:nowrap;
+  }
+  .brand span{color:var(--barro);font-style:italic;}
+  nav.top-nav{display:flex;gap:28px;flex-wrap:wrap;justify-content:flex-end;}
+  nav.top-nav a{
+    font-size:0.92rem;color:var(--piedra);border-bottom:1px solid transparent;
+    padding-bottom:2px;transition:color .15s, border-color .15s;
+  }
+  nav.top-nav a:hover{color:var(--ink);border-color:var(--barro);}
+  .date-strip{
+    background:var(--indigo);color:var(--cal);
+    font-size:0.82rem;padding:7px 32px;
+  }
+  .date-strip .wrap{display:flex;justify-content:space-between;}
+  .date-strip a{color:var(--sol);}
+
+  /* ---------- hero ---------- */
+  .hero{padding:76px 32px 56px;}
+  .hero-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.15fr 0.85fr;gap:64px;align-items:end;}
+  .eyebrow-free h1{
+    font-size:clamp(2.4rem, 4.2vw, 3.6rem);
+    line-height:1.06;letter-spacing:-0.01em;
+    max-width:14ch;
+  }
+  .hero-sub{
+    margin-top:22px;color:var(--piedra);font-size:1.08rem;max-width:46ch;
+  }
+  .search-box{margin-top:36px;max-width:520px;}
+  .search-field{
+    display:flex;border:1.5px solid var(--ink);background:var(--cal);
+  }
+  .search-field input{
+    flex:1;border:none;background:transparent;padding:16px 18px;
+    font-family:'Public Sans',sans-serif;font-size:1rem;color:var(--ink);
+  }
+  .search-field input::placeholder{color:var(--piedra);}
+  .search-field button{
+    border:none;background:var(--barro);color:var(--cal);
+    padding:0 24px;font-size:0.95rem;font-weight:600;cursor:pointer;
+    font-family:'Public Sans',sans-serif;
+  }
+  .search-hint{font-size:0.82rem;color:var(--piedra);margin-top:10px;}
+
+  .hero-map{
+    border-left:1px solid var(--linea);padding-left:40px;
+  }
+  .stat-line{display:flex;flex-direction:column;gap:22px;}
+  .stat-item{display:flex;align-items:baseline;gap:14px;}
+  .stat-num{font-family:'Fraunces',serif;font-size:2.1rem;color:var(--indigo);font-weight:500;}
+  .stat-label{color:var(--piedra);font-size:0.95rem;max-width:22ch;}
+
+  /* ---------- featured mosaic ---------- */
+  .section{padding:64px 32px;}
+  .section-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:28px;gap:24px;flex-wrap:wrap;}
+  .section-head h2{font-size:1.7rem;}
+  .section-head p{color:var(--piedra);margin:0;max-width:40ch;font-size:0.95rem;}
+
+  .mosaic{
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
+    grid-auto-rows:120px;
+    gap:2px;
+    max-width:1180px;margin:0 auto;
+  }
+  .tile{
+    display:flex;flex-direction:column;justify-content:space-between;
+    padding:20px 22px;position:relative;overflow:hidden;
+    transition:transform .18s ease;
+    cursor:pointer;
+  }
+  .tile:hover{transform:translateY(-3px);}
+  .tile h3{font-size:1.15rem;font-weight:500;line-height:1.15;}
+  .tile .count{font-size:0.8rem;opacity:0.8;}
+  .t-indigo{background:var(--indigo);color:var(--cal);}
+  .t-barro{background:var(--barro);color:var(--cal);}
+  .t-sol{background:var(--sol);color:var(--ink);}
+  .t-cal{background:var(--cal-deep);color:var(--ink);border:1px solid var(--linea);}
+
+  .tile.span-2{grid-column:span 2;}
+  .tile.span-3{grid-column:span 3;}
+  .tile.row-2{grid-row:span 2;}
+
+  /* ---------- full directory list ---------- */
+  .all-categories{
+    columns:3 220px;column-gap:40px;
+    max-width:1180px;margin:0 auto;
+  }
+  .cat-item{
+    break-inside:avoid;
+    border-top:1px solid var(--linea);
+    padding:13px 0;
+    font-size:0.98rem;
+    display:flex;justify-content:space-between;align-items:center;
+    transition:padding-left .12s ease, color .12s ease;
+  }
+  .cat-item:hover{padding-left:6px;color:var(--barro);}
+  .cat-item .n{color:var(--piedra);font-size:0.82rem;}
+  .cat-item.is-hidden{display:none;}
+
+  /* ---------- departments ---------- */
+  .dept-band{background:var(--indigo);padding:56px 32px;}
+  .dept-band .section-head h2, .dept-band .section-head p{color:var(--cal);}
+  .dept-band .section-head p{color:#C9D6DE;}
+  .dept-list{display:flex;flex-wrap:wrap;gap:10px;max-width:1180px;margin:0 auto;}
+  .dept-chip{
+    border:1px solid rgba(250,246,238,0.35);
+    padding:9px 18px;font-size:0.92rem;color:var(--cal);
+    transition:background .15s, border-color .15s;
+  }
+  .dept-chip:hover{background:rgba(250,246,238,0.12);border-color:var(--sol);}
+
+  /* ---------- footer ---------- */
+  footer{padding:60px 32px 32px;}
+  .footer-grid{
+    display:grid;grid-template-columns:1.4fr repeat(4, 1fr);gap:32px;
+    max-width:1180px;margin:0 auto;padding-bottom:36px;
+  }
+  .footer-grid h4{
+    font-family:'Public Sans',sans-serif;font-weight:600;font-size:0.85rem;
+    margin-bottom:14px;color:var(--ink);
+  }
+  .footer-grid li{margin-bottom:9px;}
+  .footer-grid a{color:var(--piedra);font-size:0.9rem;}
+  .footer-grid a:hover{color:var(--barro);}
+  .footer-brand p{color:var(--piedra);font-size:0.9rem;max-width:32ch;margin-top:10px;}
+  .footer-bottom{
+    border-top:1px solid var(--linea);padding-top:22px;max-width:1180px;margin:0 auto;
+    display:flex;justify-content:space-between;color:var(--piedra);font-size:0.82rem;flex-wrap:wrap;gap:10px;
+  }
+
+  @media (max-width:860px){
+    .hero-inner{grid-template-columns:1fr;gap:36px;}
+    .hero-map{border-left:none;padding-left:0;border-top:1px solid var(--linea);padding-top:28px;}
+    .mosaic{grid-template-columns:repeat(2,1fr);}
+    .tile.span-2, .tile.span-3{grid-column:span 2;}
+    .all-categories{columns:2 160px;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+    nav.top-nav{display:none;}
+    .header-row{justify-content:space-between;}
+  }
+</style>
+</head>
+<body>
+
+<div class="date-strip">
+  <div class="wrap">
+    <span>San Salvador · lunes 07 de septiembre de 2026</span>
+    <a href="#contacto">Contáctenos</a>
+  </div>
+</div>
+
+<header>
+  <div class="header-row">
+    <div class="brand">del<span>SALVADOR</span>.com</div>
+    <nav class="top-nav">
+      <a href="#directorio">Directorio</a>
+      <a href="#historia">Historia</a>
+      <a href="#geografia">Geografía</a>
+      <a href="#cultura">Cultura</a>
+      <a href="#embajadas">Embajadas y Consulados</a>
+      <a href="#pasaporte">Pasaporte y Visas</a>
+      <a href="#departamentos">Departamentos</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow-free">
+      <h1>Encuentra cualquier negocio salvadoreño</h1>
+      <p class="hero-sub">Desde talleres de barrio hasta grandes exportadoras: el directorio comercial más completo de El Salvador, organizado por rubro y departamento.</p>
+      <div class="search-box">
+        <div class="search-field">
+          <input id="heroSearch" type="text" placeholder="Ej. taller de autos, panadería, abogado..." aria-label="Buscar en el directorio">
+          <button type="button" onclick="document.getElementById('directorio').scrollIntoView()">Buscar</button>
+        </div>
+        <p class="search-hint">Escribe para filtrar los 42 rubros al instante.</p>
+      </div>
+    </div>
+    <div class="hero-map">
+      <div class="stat-line">
+        <div class="stat-item">
+          <span class="stat-num">42</span>
+          <span class="stat-label">rubros comerciales distintos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">14</span>
+          <span class="stat-label">departamentos cubiertos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">Miles</span>
+          <span class="stat-label">de empresas salvadoreñas listadas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="section-head">
+    <h2>Rubros más buscados</h2>
+    <p>Los puntos de partida más frecuentes de quienes usan el directorio cada mes.</p>
+  </div>
+  <div class="mosaic">
+    <div class="tile t-indigo span-2 row-2">
+      <h3>Comercio e Industria</h3>
+      <span class="count">El rubro con más empresas registradas</span>
+    </div>
+    <div class="tile t-sol">
+      <h3>Bares y Restaurantes</h3>
+    </div>
+    <div class="tile t-cal">
+      <h3>Medicina y Salud</h3>
+    </div>
+    <div class="tile t-barro row-2">
+      <h3>Autos y Vehículos</h3>
+      <span class="count">Talleres, repuestos, aseguradoras</span>
+    </div>
+    <div class="tile t-cal">
+      <h3>Construcción y Vivienda</h3>
+    </div>
+    <div class="tile t-indigo span-2">
+      <h3>Educación e Instrucción</h3>
+    </div>
+    <div class="tile t-cal">
+      <h3>Belleza y Cuidado Personal</h3>
+    </div>
+    <div class="tile t-sol">
+      <h3>Viajes y Turismo</h3>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="directorio">
+  <div class="section-head">
+    <h2>Todos los rubros</h2>
+    <p>Las 42 categorías principales del directorio, de la A a la Z.</p>
+  </div>
+  <div class="all-categories" id="catList">
+    <div class="cat-item"><span>Agricultura</span></div>
+    <div class="cat-item"><span>Alimentos y Bebidas</span></div>
+    <div class="cat-item"><span>Animales</span></div>
+    <div class="cat-item"><span>Artesanías</span></div>
+    <div class="cat-item"><span>Asociaciones y Clubes</span></div>
+    <div class="cat-item"><span>Autos y Vehículos</span></div>
+    <div class="cat-item"><span>Bares y Restaurantes</span></div>
+    <div class="cat-item"><span>Bebés y Maternidad</span></div>
+    <div class="cat-item"><span>Belleza y Cuidado Personal</span></div>
+    <div class="cat-item"><span>Comercio e Industria</span></div>
+    <div class="cat-item"><span>Computadoras</span></div>
+    <div class="cat-item"><span>Comunicaciones</span></div>
+    <div class="cat-item"><span>Construcción y Vivienda</span></div>
+    <div class="cat-item"><span>Deporte y Ejercicio</span></div>
+    <div class="cat-item"><span>Educación e Instrucción</span></div>
+    <div class="cat-item"><span>Entretenimiento y Cultura</span></div>
+    <div class="cat-item"><span>Equipo Electrónico</span></div>
+    <div class="cat-item"><span>Eventos</span></div>
+    <div class="cat-item"><span>Exportaciones</span></div>
+    <div class="cat-item"><span>Ferretería</span></div>
+    <div class="cat-item"><span>Financieros</span></div>
+    <div class="cat-item"><span>Hogar y Jardín</span></div>
+    <div class="cat-item"><span>Hoteles y Posadas</span></div>
+    <div class="cat-item"><span>Iglesias</span></div>
+    <div class="cat-item"><span>Importaciones y Distribuidoras</span></div>
+    <div class="cat-item"><span>Internet</span></div>
+    <div class="cat-item"><span>Joyas y Relojes</span></div>
+    <div class="cat-item"><span>Limpieza</span></div>
+    <div class="cat-item"><span>Maquinaria y Equipo</span></div>
+    <div class="cat-item"><span>Medicina y Salud</span></div>
+    <div class="cat-item"><span>Muebles</span></div>
+    <div class="cat-item"><span>Música y Arte</span></div>
+    <div class="cat-item"><span>Niños y Niñas</span></div>
+    <div class="cat-item"><span>Oficina</span></div>
+    <div class="cat-item"><span>Organizaciones</span></div>
+    <div class="cat-item"><span>Promoción y Publicidad</span></div>
+    <div class="cat-item"><span>Protección y Seguridad</span></div>
+    <div class="cat-item"><span>Regalos y Flores</span></div>
+    <div class="cat-item"><span>Ropa, Telas y Accesorios</span></div>
+    <div class="cat-item"><span>Servicios Profesionales</span></div>
+    <div class="cat-item"><span>Transporte, Carga y Correo</span></div>
+    <div class="cat-item"><span>Viajes y Turismo</span></div>
+  </div>
+</section>
+
+<section class="dept-band" id="departamentos">
+  <div class="section-head">
+    <h2>Explora por departamento</h2>
+    <p>Filtra empresas según dónde operan, de occidente a oriente.</p>
+  </div>
+  <ul class="dept-list">
+    <li class="dept-chip">Ahuachapán</li>
+    <li class="dept-chip">Santa Ana</li>
+    <li class="dept-chip">Sonsonate</li>
+    <li class="dept-chip">Chalatenango</li>
+    <li class="dept-chip">La Libertad</li>
+    <li class="dept-chip">San Salvador</li>
+    <li class="dept-chip">Cuscatlán</li>
+    <li class="dept-chip">La Paz</li>
+    <li class="dept-chip">Cabañas</li>
+    <li class="dept-chip">San Vicente</li>
+    <li class="dept-chip">Usulután</li>
+    <li class="dept-chip">San Miguel</li>
+    <li class="dept-chip">Morazán</li>
+    <li class="dept-chip">La Unión</li>
+  </ul>
+</section>
+
+<footer id="contacto">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="brand">del<span>SALVADOR</span>.com</div>
+      <p>El directorio empresarial donde encontrarás teléfonos, direcciones y enlaces de miles de empresas salvadoreñas.</p>
+    </div>
+    <div>
+      <h4>El país</h4>
+      <ul>
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#geografia">Geografía</a></li>
+        <li><a href="#gobierno">Gobierno y política</a></li>
+        <li><a href="#infraestructura">Infraestructura</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Vida y cultura</h4>
+      <ul>
+        <li><a href="#educacion">Educación</a></li>
+        <li><a href="#cultura">Cultura y artes</a></li>
+        <li><a href="#departamentos">Departamentos</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Trámites</h4>
+      <ul>
+        <li><a href="#embajadas">Embajadas y Consulados</a></li>
+        <li><a href="#pasaporte">Pasaporte y Visas</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Directorios vecinos</h4>
+      <ul>
+        <li><a href="#">Directorio de empresas de Guatemala</a></li>
+        <li><a href="#">Directorio de empresas de Honduras</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 delSALVADOR.com</span>
+    <span>Directorio de Empresas de El Salvador</span>
+  </div>
+</footer>
+
+<script>
+  const input = document.getElementById('heroSearch');
+  const items = Array.from(document.querySelectorAll('.cat-item'));
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    items.forEach(item => {
+      const text = item.textContent.trim().toLowerCase();
+      item.classList.toggle('is-hidden', q.length > 0 && !text.includes(q));
+    });
+  });
+</script>
+
+</body>
+</html>

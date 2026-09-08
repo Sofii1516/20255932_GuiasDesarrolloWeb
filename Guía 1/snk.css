@@ -1,0 +1,183 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    background-image: url(img/fondo.png);
+    background-position: 50% 50%;
+    background-repeat:no-repeat;
+    color: w2b2b;
+    line-height: 1.6;
+    margin: 5px;
+}
+
+header {
+    background-color:darkred;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px;
+    border-bottom: 6px solid white;
+}
+
+#navegacion {
+    margin-top: 16px;
+    text-align: center;
+}
+ 
+#navegacion a {
+    margin: 0 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 10px;
+}
+ 
+#navegacion a:hover {
+    border-bottom: 2px solid #ffffff;
+    color: red;
+    transition: 3s all;
+
+}
+
+.main-title {
+    font-family: 'Black Ops One', sans-serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+h1{
+    font-family: 'Black Ops One', sans-serif;
+}
+
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.3em;
+    color: #cccccc;
+    margin-top: 5px;
+}
+
+.section-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: #b5121b;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.cursiva {
+    font-style: italic;
+    text-align: center;
+    font-size: 1.15em;
+    color: #b5121b;
+    font-weight: 700;
+}
+
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.intro-text, .opinion-text {
+    font-size: 1.1em;
+    text-align: justify;
+    color: white
+}
+
+#personajes {
+    background-color: hsla(0, 0%, 100%, 0.748);
+    border: 2px solid #1a1a1a;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+#sinopsis img,.personaje img,.datos img {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    border: 1px solid #F1E9DC;
+    border-radius: 12px;
+    margin: 0 auto 24px auto;
+}
+
+.personaje:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+ 
+.nombre-personaje {
+    color: #b5121b;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 4px;
+}
+ 
+.datos {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+}
+ 
+.tabla-datos {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+ 
+.tabla-datos th,
+.tabla-datos td {
+    border: 1px solid #999999;
+    padding: 12px;
+    text-align: center;
+}
+ 
+.tabla-datos th {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+ 
+.tabla-datos tr:nth-child(even) {
+    background-color: #e6e6e6;
+}
+ 
+.gusta {
+    background-color: #1a1a1a;
+    color: #f4f1ea;
+    border-radius: 8px;
+    padding: 30px;
+}
+ 
+.gusta .section-title {
+    color: #ffffff;
+}
+ 
+.gusta .opinion-text {
+    color: #f4f1ea;
+}
+ 
+.gusta .cursiva {
+    color: #ff4d4d;
+}
+ 
+footer {
+    text-align: center;
+    background-color: #1a1a1a;
+    color: #999999;
+    padding: 20px;
+    font-size: 0.85em;
+    margin-top: 40px;
+}
