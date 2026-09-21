@@ -7,28 +7,40 @@ body {
     text-align: center;
 }
 
+.guia {
+    margin-bottom: 40px;
+}
+
 .main-title {
     text-align: center;
     color: #ffffff;
-    font-size: 2.2em;
+    font-size: 2.6em;
     margin-bottom: 30px;
 }
 
+.guia-title {
+    color: #ffffff;
+    font-size: 1.8em;
+    margin: 0 0 20px 0;
+}
+
 .fila {
-    width: 800px;
-    max-width: 100%;
-    margin: 0 auto 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .cuadro {
     box-sizing: border-box;
-    float: left;
     background-color: #ffffff;
     border: 1px solid #cccccc;
     border-radius: 8px;
     padding: 20px;
     width: 160px;
-    margin: 0 10px;
     text-align: center;
 }
 
@@ -53,6 +65,7 @@ body {
 }
 
 .boton {
+    display: inline-block;
     padding: 8px 18px;
     background-color: #002860;
     color: #ffffff;
