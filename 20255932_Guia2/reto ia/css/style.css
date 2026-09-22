@@ -554,7 +554,7 @@ ul { list-style: none; }
   position: absolute; inset: 0;
   background: var(--color-electric-indigo);
   transform: translateY(101%);
-  transition: transform 0.5s var(--ease);
+  transition: transform 3s var(--ease);
   z-index: -1;
 }
 .rubro-card::after {
