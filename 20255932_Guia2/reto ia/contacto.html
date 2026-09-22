@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contáctenos — delSALVADOR.com</title>
+  <meta name="description" content="Contacto en El Salvador o escríbanos para registrar su empresa.">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <div class="bg-gif" aria-hidden="true"></div>
+
+  <div class="meta-bar">
+    <div class="wrap">
+      <span id="fecha-hoy">San Salvador, El Salvador</span>
+      <nav aria-label="Enlaces rápidos">
+        <a href="contacto.html#enlaces">Pasaporte y Visas</a>
+        <a href="contacto.html#enlaces">Embajadas y Consulados</a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="nav-row">
+      <a href="index.html" class="logo">delSALVADOR<span>.com</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="menu">☰ MENÚ</button>
+      <nav class="primary-nav" id="menu" aria-label="Principal">
+        <a class="pixel-link" href="index.html">Inicio</a>
+        <a class="pixel-link" href="directorio.html">Directorio</a>
+        <a class="pixel-link active" href="contacto.html" aria-current="page">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero page-hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy" data-hero-fade="0.25">
+          <span class="tag">Contáctenos</span>
+          <h1 class="display">Contáctenos, <em>le respondemos</em></h1>
+          <p class="lead">Registre su empresa, solicite información publicitaria o háganos llegar su consulta. Atendemos a empresas y usuarios en El Salvador y en el exterior.</p>
+          <div class="hero-ctas"><a class="btn btn-primary" href="#formulario">Ir al formulario <span class="arrow">→</span></a><a class="btn btn-ghost" href="mailto:info@deguate.com">info@deguate.com</a></div>
+        </div>
+        <div class="art" data-hero-fade="0.5">
+          <img src="img/senal-contacto.svg" alt="Ilustración de una señal de radar azul que representa el contacto">
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="formulario">
+      <div class="wrap contact-grid">
+        <div class="contact-visual" data-scroll>
+          <img src="img/ondas-puntos.svg" alt="Ilustración de una superficie de puntos azules en movimiento">
+          <div class="inner">
+            <div>
+              <span class="tag">Contacto en El Salvador</span>
+              <h2 class="h3 contact-title">Haga que su empresa aparezca donde la buscan</h2>
+              <p>Salvadoreños en el país, en el exterior y visitantes consultan el directorio para encontrar productos y servicios.</p>
+            </div>
+            <ul class="contact-info">
+              <li><span>Correo</span><a href="mailto:info@deguate.com">info@deguate.com</a></li>
+              <li><span>Cobertura</span><strong>14 departamentos</strong></li>
+              <li><span>Directorio</span><strong>41 categorías</strong></li>
+              <li><span>Red</span><strong>Infotenango</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate data-scroll>
+          <span class="tag">Formulario</span>
+          <h2 class="h3">Envíenos su solicitud</h2>
+          <p>Complete el formulario para registrar su empresa o solicitar información publicitaria.</p>
+          <div class="form-row">
+            <div class="field"><label for="nombre">Nombre completo</label><input id="nombre" name="nombre" required placeholder="Ej. María López"><span class="err">Ingrese su nombre.</span></div>
+            <div class="field"><label for="empresa">Empresa</label><input id="empresa" name="empresa" placeholder="Ej. Comercial Salvadoreña S.A."><span class="err"></span></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="email">Correo electrónico</label><input id="email" name="email" type="email" required placeholder="contacto@empresa.com.sv"><span class="err">Ingrese un correo válido.</span></div>
+            <div class="field"><label for="telefono">Teléfono</label><input id="telefono" name="telefono" type="tel" pattern="[0-9+()\s-]{8,}" placeholder="+503 2222-2222"><span class="err">Ingrese un teléfono válido.</span></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="motivo">Motivo</label>
+              <select id="motivo" name="motivo" required><option value="">Seleccione…</option><option>Actualizar o registrar mi empresa</option><option>Actualizar o registrar mi empresa</option><option>Actualizar datos</option><option>Consulta general</option></select>
+              <span class="err">Seleccione un motivo.</span></div>
+            <div class="field"><label for="departamento">Departamento</label>
+              <select id="departamento" name="departamento"><option value="">Seleccione…</option><option>Ahuachapán</option><option>Santa Ana</option><option>Sonsonate</option><option>Chalatenango</option><option>La Libertad</option><option>San Salvador</option><option>Cuscatlán</option><option>La Paz</option><option>Cabañas</option><option>San Vicente</option><option>Usulután</option><option>San Miguel</option><option>Morazán</option><option>La Unión</option><option>Fuera de El Salvador</option></select><span class="err"></span></div>
+          </div>
+          <div class="field"><label for="categoria">Categoría comercial</label>
+            <select id="categoria" name="categoria"><option value="">Seleccione…</option><optgroup label="Negocios e Industria"><option>Agricultura</option><option>Comercio e Industria</option><option>Exportaciones</option><option>Importaciones y Distribuidoras</option><option>Maquinaria y Equipo</option><option>Financieros</option><option>Servicios Profesionales</option><option>Promoción y Publicidad</option><option>Oficina</option><option>Transporte de Carga y Correo</option></optgroup><optgroup label="Hogar y Construcción"><option>Hogar y Jardín</option><option>Construcción y Vivienda</option><option>Ferretería</option><option>Limpieza</option><option>Muebles</option></optgroup><optgroup label="Familia y Salud"><option>Bebés y Maternidad</option><option>Niños y Niñas</option><option>Belleza y Cuidado Personal</option><option>Medicina y Salud</option></optgroup><optgroup label="Tecnología y Comunicaciones"><option>Computadoras</option><option>Comunicaciones</option><option>Internet</option><option>Equipo Electrónico</option></optgroup><optgroup label="Moda y Estilo"><option>Ropa, Telas y Accesorios</option><option>Joyas y Relojes</option><option>Regalos y Flores</option><option>Música y Arte</option></optgroup><optgroup label="Ocio y Turismo"><option>Entretenimiento y Cultura</option><option>Eventos</option><option>Viajes y Turismo</option><option>Hoteles y Posadas</option><option>Bares y Restaurantes</option><option>Deporte y Ejercicio</option></optgroup><optgroup label="Comunidad y Vida"><option>Iglesias</option><option>Asociaciones y Clubes</option><option>Organizaciones</option><option>Protección y Seguridad</option><option>Autos y Vehículos</option><option>Animales</option><option>Artesanías y Manualidades</option><option>Educación e Instrucción</option></optgroup></select><span class="err"></span></div>
+          <div class="field"><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" required minlength="10" placeholder="Cuéntenos sobre su empresa o su consulta…"></textarea><span class="err">Escriba un mensaje de al menos 10 caracteres.</span></div>
+          <div class="form-foot">
+            <small>Responderemos a su correo en los próximos días hábiles.</small>
+            <button class="btn btn-primary" type="submit">Enviar solicitud <span class="arrow">→</span></button>
+          </div>
+          <div class="form-success" role="status"></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section band-dark" id="enlaces">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag" data-scroll>Enlaces útiles</span>
+          <h2 class="h2" data-scroll>Trámites e información frecuente</h2>
+          <p data-scroll>Accesos rápidos del sitio para salvadoreños en el exterior y visitantes.</p>
+        </div>
+        <div class="links-grid">
+          <a class="link-card" href="#formulario" data-scroll><span class="code"><span>[ 01 ]</span><span>↗</span></span><div><h3>Pasaporte y Visas</h3><p>Información sobre trámites de pasaporte y visas.</p></div></a>
+          <a class="link-card" href="#formulario" data-scroll><span class="code"><span>[ 02 ]</span><span>↗</span></span><div><h3>Embajadas y Consulados</h3><p>Representaciones diplomáticas en El Salvador y en el exterior.</p></div></a>
+          <a class="link-card" href="#formulario" data-scroll><span class="code"><span>[ 03 ]</span><span>↗</span></span><div><h3>Contacto</h3><p>Registre o actualice los datos de su empresa en el directorio comercial.</p></div></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band-white">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag" data-scroll>Preguntas frecuentes</span>
+          <h2 class="h2" data-scroll>Antes de escribirnos</h2>
+        </div>
+        <div class="faq">
+          <details data-scroll><summary>¿Tiene costo consultar el directorio?</summary><p>No. La consulta es gratuita y no necesita crear una cuenta, viva en El Salvador o en el exterior.</p></details>
+          <details data-scroll><summary>¿Cómo registro mi empresa?</summary><p>Complete el formulario seleccionando el motivo de contacto e indique su categoría comercial y departamento.</p></details>
+          <details data-scroll><summary>¿delSALVADOR.com es un sitio del gobierno?</summary><p>No. Es un directorio empresarial de carácter comercial, parte de la red Infotenango, y no está afiliado al Gobierno de El Salvador.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Preselecciona la categoría si viene desde el directorio (contacto.html?categoria=...)
+    const c = new URLSearchParams(location.search).get('categoria');
+    if (c) { const s = document.getElementById('categoria'); [...s.options].forEach(o => { if (o.text === c) o.selected = true; }); }
+  </script>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">delSALVADOR<span>.com</span></a>
+          <p>Directorio empresarial de El Salvador. No está afiliado al Gobierno de El Salvador; es una entidad comercial.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Sobre El Salvador</h4>
+          <ul>
+            <li><a href="index.html#quienes">Historia</a></li>
+            <li><a href="index.html#quienes">Geografía</a></li>
+            <li><a href="directorio.html">Departamentos</a></li>
+            <li><a href="index.html#quienes">Infraestructura</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Cultura y gobierno</h4>
+          <ul>
+            <li><a href="index.html#audiencias">Política y Gobierno</a></li>
+            <li><a href="directorio.html#comunidad">Educación</a></li>
+            <li><a href="directorio.html#moda">Cultura y artes</a></li>
+            <li><a href="contacto.html#enlaces">Embajadas y Consulados</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="contacto.html#enlaces">Pasaporte y Visas</a></li>
+            <li><a href="contacto.html">Contacto en El Salvador</a></li>
+            <li><a href="mailto:info@deguate.com">info@deguate.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Copyright © delSALVADOR.com — Todos los derechos reservados</span>
+        <span>Un sitio de Infotenango</span>
+      </div>
+      <div class="footer-giant" aria-hidden="true">delSALVADOR</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
