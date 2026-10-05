@@ -1,0 +1,351 @@
+:root{
+    --color-texto: #342e29;
+    --color-fondo:#f5efe6;
+    --color-principal: #293e36;
+    --color-acento: #93472f; 
+    --color-superficie: #ffffff; 
+    --color-contraste: #ead1ad; 
+    --color-borde: #ded3c4; 
+    --color-fondo-secundario: #eadfce; 
+    --color-capa-inicial: rgba(25, 35, 29, 0.85); 
+    --color-capa-final: rgba(25, 35, 29, 0.65); 
+    --color-sombra: rgba(52, 46, 41, 0.10);
+}
+
+body{
+    margin: 0px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto; 
+}
+
+img {
+    max-width: 100%; 
+}
+
+h1, h2, h3{
+    line-height: 1.2;
+}
+
+h2, h3{
+    color: var(--color-principal);
+}
+
+a{
+    color: var(--color-acento);
+}
+
+a:hover, a:focus-visible{
+    color: var(--color-principal);
+}
+
+.encabezado-principal {
+    color: var(--color-superficie);
+    background-color: var(--color-principal);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* 35.
+a) ¿Permanece adherido el encabezado? No, con solo position: sticky no se queda pegado.
+b) ¿Qué información falta para indicar el punto de adhesión? Falta la coordenada (top, bottom, left o right) que dice a qué distancia del borde de la ventana se pega. Por ejemplo top: 0.
+*/
+
+/* 36.
+Con top: 0 el encabezado se queda pegado arriba al hacer scroll. Cuando las etiquetas de las tarjetas (z-index: 1) pasan cerca, se ven por encima del encabezado, porque el encabezado todavía no tiene z-index.
+*/
+
+/* 37.
+El encabezado necesita un valor mayor que el de las etiquetas (1) para quedar por encima de ellas. Con z-index: 10 las etiquetas pasan por detrás del encabezado.
+*/
+
+.marca {
+    color: var(--color-superficie);
+    font-size: 1.15rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*Es para que vaya acorde al paso 7*/
+.marca:hover,
+.marca:focus-visible {
+  color: var(--color-contraste);
+}
+
+.barra-navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem 2rem;
+    padding: 1rem 0;
+}
+
+.menu{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.menu a{
+    color: var(--color-superficie);
+    text-decoration: none;
+}
+
+.menu:hover, .menu:focus-visible{
+    color: var(--color-contraste);
+}
+
+.presentacion { 
+    padding: 4rem 0; 
+    color: var(--color-superficie); 
+    background-color: var(--color-principal); 
+    background-image:
+        linear-gradient(
+            to right,
+            var(--color-capa-inicial),
+            var(--color-capa-final)
+        ),
+        url("../images/gran-muralla-china.jpg");
+    background-size: cover; 
+    background-position: center; 
+}
+
+.presentacion h1 {
+    max-width: 760px;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.presentacion p {
+    max-width: 640px;
+}
+
+.sobretitulo {
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color-acento);
+}
+
+.presentacion .sobretitulo {
+    color: var(--color-contraste);
+}
+
+.boton-principal {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.25rem;
+    color: var(--color-superficie);
+    background-color: var(--color-acento);
+    border-radius: 0.3rem;
+    text-decoration: none;
+}
+
+.boton-principal:hover, .boton-principal:focus-visible {
+    color: var(--color-principal);
+    background-color: var(--color-contraste);
+}
+
+.seccion-maravillas {
+    padding: 3rem 0;
+}
+
+.titulo-seccion {
+    max-width: 680px;
+    margin-bottom: 2rem;
+}
+
+.titulo-seccion h2 {
+    margin: 0 0 0.75rem;
+    font-size: 2rem;
+}
+
+.maravillas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+/* 16.
+a) ¿Cuántas filas intenta formar Flexbox? Solo una
+b) ¿Qué ocurre con el ancho de las tarjetas? Se comprimen
+c) ¿El contenido permanece cómodo de leer? No, el texto queda en lineas muy angostas y son demasiadas lineas.
+*/
+
+/* 17.
+Las tarjetas pasan a la otra fila cuando ya no caben. Como no tienen tamaño base, el ancho depende por ahorita del contenido, por eso no son uniformes.
+*/
+
+/* 19
+gap es el espacio entre tarjetas, o sea afuera de ellas, y no agrega espacio en los bordes del contenedor. Padding es el relleno interior de cada tarjeta, entre el borde y el contenido.
+*/
+
+/* 20
+a) ¿Por qué crece más que las tarjetas de una fila completa? Porque al tener flex-grow: 1, cada fila reparte su espacio libre entre sus propias tarjetas, y como la última fila tiene menos tarjetas, les da más espacio.
+b) ¿Qué valor de flex permite ese crecimiento? El primer valor de flex, el flex-grow: 1
+c) ¿Resulta visualmente conveniente que ocupe todo el espacio? No porque la tarjeta queda demasiado ancha y la foto se estira.
+
+Con max-width: 360px se limita y la propiedad que centra la fila incompleta es justify-content: center
+*/
+
+.maravilla {
+    max-width: 360px;
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px var(--color-sombra);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+}
+
+.maravilla img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+/* 23
+a) ¿Mantienen su proporción? No, se deforma porque se ajusta a esa caja.
+b) ¿Qué diferencia se observa entre la fotografía vertical y las horizontales? Al forzar imagenes verticales, como petra, a un rectángulo horizontal se ven muy aplastadas. Pero las que ya son horizontales se deforman menos porque su proporción original se parece más a la de la caja.
+*/
+
+/* 24
+Con contain se ve la foto completa y sin deformar, pero quedan espacios vacíos. Con cover la foto llena toda el área sin deformarse, pero se recorta lo que sobra.
+*/
+
+.maravilla-contenido {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 1.25rem;
+}
+
+.ubicacion {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--color-acento);
+}
+
+.maravilla-contenido h3 {
+    margin: 0.25rem 0 0.75rem;
+    font-size: 1.35rem;
+}
+
+.maravilla-contenido a {
+    font-weight: bold;
+    margin-top: auto;
+    align-self: flex-start;
+}
+/* 26
+margin-top: auto absorbe todo el espacio vertical libre dentro de la tarjeta y empuja el enlace hasta el fondo para que los enlaces de una misma fila quedan alineados.
+*/
+
+/* 27
+a) ¿En qué dirección se desplazó la tarjeta?  se desplazo 50 px a la derecha y 30 px hacia abajo.
+b) ¿Desde qué posición se calcula el desplazamiento? desde su posicion original en el flujo normal.
+c) ¿Las demás tarjetas ocuparon su posición original? si, se quedaron en su lugar y el espacio original queda reservado
+d) ¿La tarjeta desplazada puede superponerse con otras? Si, con z-index: 2 se pone encima de las vecinas.
+*/
+
+/* 28.
+a) ¿La tarjeta se desplaza hacia la derecha o hacia la izquierda? Hacia la izquierda.
+b) ¿Por qué una coordenada situada en un lado puede producir movimiento en la dirección contraria? Porque right: 50px significa separarse 50px del lado derecho de su posición original, o sea que se empuja desde la derecha y por eso se mueve hacia la izquierda.
+*/
+
+/* 29.
+a) ¿Qué ocurrió con las demás tarjetas? Se reacomodaron y ocuparon el lugar de Petra, y la tarjeta absoluta quedó flotando encima.
+b) ¿Continúa reservado el espacio original de Petra? No, ya no se reserva.
+c) ¿Respecto de qué área parecen calcularse top y left? Respecto del área inicial del documento (esquina superior izquierda de la página), porque ningún antecesor está posicionado.
+*/
+
+/* 30.
+a) ¿Desde dónde se calculan ahora top y left? Desde la esquina superior izquierda de .maravillas.
+b) ¿Por qué se modificó la referencia si el contenedor no fue desplazado? Porque un elemento absoluto toma como referencia a su antecesor posicionado más cercano. position: relative convierte a .maravillas en antecesor posicionado sin moverlo, ya que no tiene top, left, etc.
+*/
+
+/* 31.
+a) ¿Cuál de los dos tipos de posicionamiento conserva el espacio original del elemento? El relativo.
+b) ¿Cuál permite que las demás cajas ocupen ese espacio? El absoluto.
+c) ¿Cómo se determina el sistema de referencia de un elemento absoluto? Es el antecesor posicionado más cercano (con position distinto de static). Si no existe, es el área inicial del documento.
+*/
+
+/* 32.
+Con position: static, top y left dejan de tener efecto porque un elemento estático no se considera posicionado. Después de comprobarlo se eliminaron por completo la regla temporal de .maravilla:nth-child(2) y la de .maravillas.
+*/
+
+.maravilla-imagen {
+    position: relative;
+}
+
+.continente {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+    padding: 0.25rem 0.75rem;
+    color: var(--color-superficie);
+    background-color: var(--color-acento);
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.volver-arriba {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    color: var(--color-superficie);
+    background-color: var(--color-acento);
+    border: 2px solid var(--color-superficie);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/* 38.
+a) ¿Cuál conserva su espacio original? El encabezado (sticky). El botón (fixed) sale del flujo y no conserva espacio.
+b) ¿Cuál permanece ubicado respecto de la ventana desde el inicio? El botón. El encabezado se comporta como relativo hasta que llega al punto de adhesión.
+*/
+
+.seccion-historia {
+    padding: 3rem 0;
+    background-color: var(--color-fondo-secundario);
+}
+
+.historia-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.historia-contenido > * {
+    flex: 1 1 300px;
+}
+
+.pie-pagina {
+    padding: 2rem 0 5rem;
+    color: var(--color-superficie);
+    background-color: var(--color-principal);
+}
