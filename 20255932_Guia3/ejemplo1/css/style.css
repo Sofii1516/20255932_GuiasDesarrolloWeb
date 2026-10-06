@@ -103,7 +103,7 @@ El encabezado necesita un valor mayor que el de las etiquetas (1) para quedar po
     text-decoration: none;
 }
 
-.menu:hover, .menu:focus-visible{
+.menu a:hover, .menu a:focus-visible{
     color: var(--color-contraste);
 }
 
@@ -211,6 +211,11 @@ Con max-width: 360px se limita y la propiedad que centra la fila incompleta es j
     flex-direction: column;
     flex: 1 1 300px;
 }
+/* 22
+overflow: hidden recorta lo que sobresale de la tarjeta.
+border-radius solo redondea el borde de la caja, pero no recorta el contenido de adentro.
+Con overflow: hidden la parte de la foto que sobraba en las esquinas se corta y por eso ahora sí se respeta el redondeo.
+*/
 
 .maravilla img {
     display: block;
