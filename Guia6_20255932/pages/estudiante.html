@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/stylesFunciones.css" rel="stylesheet" />
+    <link rel="icon" href="../img/js.png" sizes="32x32" type="image/png" />
+    <title>Ficha de estudiante</title>
+</head>
+
+<body>
+    <header>
+        <div class="px-3 py-2 text-bg-dark fixed-top">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="../indexFunciones.html"
+                        class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                        <img src="../img/js.png" alt="" width="32" height="32" class="me-2" />
+                    </a>
+
+                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small nav-bar">
+                        <li class="text-center">
+                            <a href="recursividad.html" class="nav-link text-white">
+                                <i class="bi bi-arrow-clockwise bi-2 d-block"></i>
+                                Recursividad
+                            </a>
+                        </li>
+                        <li class="text-center">
+                            <a href="tabla.html" class="nav-link text-white">
+                                <i class="bi bi-table bi-2 d-block"></i>
+                                Creando una Tabla
+                            </a>
+                        </li>
+                        <li class="text-center">
+                            <a href="formulario.html" class="nav-link text-white">
+                                <i class="bi bi-ui-checks bi-2 d-block"></i>
+                                Formulario
+                            </a>
+                        </li>
+                        <li class="text-center nav-bar-li-active">
+                            <a href="estudiante.html" class="nav-link text-white">
+                                <i class="bi bi-person-badge bi-2 d-block"></i>
+                                Ficha estudiante
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-12 shadow-lg p-3 mt-5 bg-body rounded">
+                <h3>Expresiones regulares en JavaScript</h3>
+                <p>
+                    Las expresiones regulares son secuencias de caracteres que describen un patrón, y sirven para
+                    comprobar si un texto tiene cierto formato o para encontrar partes específicas dentro de él.
+                    En JavaScript se manejan como objetos <span class="fw-bold">RegExp</span>. Podemos escribirlas
+                    directamente entre dos barras, como <span class="text-danger fw-bold">/^[0-9]+$/</span>, o
+                    construirlas a partir de un texto con <span class="text-danger fw-bold">new RegExp("^[0-9]+$")</span>.
+                </p>
+                <p>
+                    Para validar formularios lo más común es usar <span class="fw-bold">test()</span>, que nos dice
+                    con true o false si el valor cumple con el patrón. También existe <span class="fw-bold">match()</span>,
+                    que en lugar de un booleano nos regresa lo que encontró. Estos son algunos de los símbolos que
+                    más se usan al armar un patrón:
+                </p>
+                <ul>
+                    <li><span class="fw-bold">^</span> marca dónde empieza el texto y <span class="fw-bold">$</span> dónde termina.</li>
+                    <li><span class="fw-bold">[A-Z]</span> o <span class="fw-bold">[0-9]</span> definen qué caracteres o rangos se aceptan.</li>
+                    <li><span class="fw-bold">\d</span> representa un número del 0 al 9 y <span class="fw-bold">\s</span> un espacio.</li>
+                    <li><span class="fw-bold">{n}</span>, <span class="fw-bold">{n,m}</span>, <span class="fw-bold">+</span> y <span class="fw-bold">*</span> indican cuántas veces puede aparecer algo.</li>
+                    <li>Los paréntesis <span class="fw-bold">( )</span> agrupan partes del patrón y <span class="fw-bold">|</span> funciona como un "o".</li>
+                    <li>Las banderas <span class="fw-bold">i</span> y <span class="fw-bold">g</span> permiten no distinguir mayúsculas y buscar todas las coincidencias.</li>
+                </ul>
+            </div>
+            <div class="col-12 shadow-lg p-3 mt-5 bg-body rounded">
+                <h3>Ficha del estudiante</h3>
+                <form id="idFormEstudiante" novalidate>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="idTxtCarnet" placeholder="Carnet"
+                                    maxlength="5" />
+                                <label for="idTxtCarnet">
+                                    <i class="bi bi-person-badge"></i> Carnet (Ej: AB001)
+                                </label>
+                                <div class="invalid-feedback">Debe tener dos letras y tres números. Ejemplo: AB001</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="idTxtNombreCompleto"
+                                    placeholder="Nombre completo" />
+                                <label for="idTxtNombreCompleto">
+                                    <i class="bi bi-person-circle"></i> Nombre completo
+                                </label>
+                                <div class="invalid-feedback">Ingrese nombre y apellido, solo letras y espacios</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="idTxtDui" placeholder="DUI"
+                                    maxlength="10" />
+                                <label for="idTxtDui">
+                                    <i class="bi bi-credit-card-2-front"></i> DUI (########-#)
+                                </label>
+                                <div class="invalid-feedback">El formato del DUI debe ser ########-#</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="idTxtNit" placeholder="NIT"
+                                    maxlength="17" />
+                                <label for="idTxtNit">
+                                    <i class="bi bi-card-text"></i> NIT (####-######-###-#)
+                                </label>
+                                <div class="invalid-feedback">El formato del NIT debe ser ####-######-###-#</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="idTxtFecha" placeholder="Fecha de nacimiento"
+                                    maxlength="10" />
+                                <label for="idTxtFecha">
+                                    <i class="bi bi-calendar-date"></i> Fecha nacimiento (dd/mm/aaaa)
+                                </label>
+                                <div class="invalid-feedback">Ingrese una fecha válida en formato dd/mm/aaaa</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="idTxtCorreo" placeholder="Correo electrónico" />
+                                <label for="idTxtCorreo">
+                                    <i class="bi bi-envelope"></i> Correo electrónico
+                                </label>
+                                <div class="invalid-feedback">Ingrese un correo válido. Ejemplo: usuario@dominio.com</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="idTxtEdad" placeholder="Edad"
+                                    maxlength="3" />
+                                <label for="idTxtEdad">
+                                    <i class="bi bi-123"></i> Edad
+                                </label>
+                                <div class="invalid-feedback">La edad solo debe contener números</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 pt-2">
+                            <button id="idBtnValidar" type="button" class="btn btn-success">
+                                <i class="bi bi-check-circle"></i> Validar datos
+                            </button>
+                            <button id="idBtnLimpiarEstudiante" type="button" class="btn btn-danger">
+                                <i class="bi bi-trash"></i> Limpiar formulario
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 shadow-lg p-3 mt-5 mb-5 bg-body rounded">
+                <h3>Datos del estudiante</h3>
+                <div id="idResultadoEstudiante">
+                    Ninguno
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-5"></div>
+    <footer class="text-bg-dark fixed-bottom">
+        <div class="container py-3">
+            <a href="../../index.html" class="nav-link text-white">
+                <i class="bi bi-house-door" role="img" aria-label="IndiceGuias"></i>
+                Índice de guías
+            </a>
+        </div>
+    </footer>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/estudiante.js" defer></script>
+</body>
+
+</html>
